@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html>
+  <html>
   <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>PoderJudicial</title>
+  <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
+    <!--primera vista-->
+
+  <div  id="vista1"class="">
+  <h2>
+  <img src="img/poderjudicial.png" alt="">
+</h2>
+  <h3>En el Poder Judicial estamos comprometidos con las víctimas
+       de abuso protegiendo su identidad.
+      Agrega los datos:</h3>
+
+  <!--trabajador ingresa datos-->
+
+  <p> Nombre: <input type="texto" name="" value= "" id="name" class="input-name">  </p>
+  <p> Notificación: <input type="texto" name="" value= "" id="Notificación" class="input-not"> </p>
+  <p> Código de seguridad: <input type="texto" name="" value= "" id="Código" class="input-cod"></p>
+  <p> <button type="button" id="btn"> CIFRAR </button> </p>
+
+  </div>
+
+  <!--Segunda vista Datos cifrados-->
+  <div id='vista2' class='hide'>
+
+  <h3>Datos cifrados. Entregar al usuario</h3>
+
+  <p> Nombre:  <input type='texto' name='' value= '' id='name' class='input-name'> </p>
+  <p> Notificación:  <input type='texto' name='' value= '' id='Notificación' class='input-not'>  </p>
+  <p> Código de seguridad: <input type='texto' name='' value= '' id= 'Código' class='input-cod'> </p>
+  <p> <button type='button' id='btn2'> COPIAR DATOS </button> </p>
+
+  </div>
+
+  <!-- Tercera vista Datos descifrados-->
+
+  <div id='vista3' class='hide'>
+  <h3>El Poder Judicial sabe el difícil momento que estas atravesando. Por eso estamos contigo protegiendo tu identidad.
+  Agrega los datos cifrados:</h3>
+
+  <p> Nombre:  <input type='texto' name='' value= '' id="name" class="input-name"> </p>
+  <p> Notificación:  <input type="texto" name="" value= "" id="Notificación" class="input-not"> </p>
+  <p> Código de seguridad: <input type="texto" name="" value= "" id="Código" class="input-cod"></p>
+  <p> <button type="button" id="btn3"> DESCIFRAR </button> </p>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
