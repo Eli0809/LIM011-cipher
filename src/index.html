@@ -1,52 +1,71 @@
 <!DOCTYPE html>
-  <html>
-  <head>
+<html>
+
+<head>
   <meta charset="utf-8">
   <title>PoderJudicial</title>
   <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!--primera vista-->
+</head>
 
-  <div  id="vista1"class="">
-  <h2>
-  <img src="img/poderjudicial.png" alt="">
-</h2>
-  <h3>En el Poder Judicial estamos comprometidos con las víctimas
-       de abuso protegiendo su identidad.
+<body>
+  <!--primera vista-->
+
+  <div id="vista1">
+    <h2>
+      <img src="img/pjudicial.png">
+
+    </h2>
+    <h3>En el Poder Judicial estamos comprometidos con las víctimas
+      de abuso protegiendo su identidad.
       Agrega los datos:</h3>
 
-  <!--trabajador ingresa datos-->
+    <!--trabajador ingresa datos-->
 
-  <p> Nombre: <input type="texto" name="" value= "" id="name" class="input-name">  </p>
-  <p> Notificación: <input type="texto" name="" value= "" id="Notificación" class="input-not"> </p>
-  <p> Código de seguridad: <input type="texto" name="" value= "" id="Código" class="input-cod"></p>
-  <p> <button type="button" id="btn"> CIFRAR </button> </p>
-
-  </div>
-
-  <!--Segunda vista Datos cifrados-->
-  <div id='vista2' class='hide'>
-
-  <h3>Datos cifrados. Entregar al usuario</h3>
-
-  <p> Nombre:  <input type='texto' name='' value= '' id='name' class='input-name'> </p>
-  <p> Notificación:  <input type='texto' name='' value= '' id='Notificación' class='input-not'>  </p>
-  <p> Código de seguridad: <input type='texto' name='' value= '' id= 'Código' class='input-cod'> </p>
-  <p> <button type='button' id='btn2'> COPIAR DATOS </button> </p>
+    <p> Nombre </p>
+    <p> <input type="texto" name="" value="" id="name" class="input-name"> </p>
+    <p> Notificación </p>
+    <p> <input type="texto" name="" value="" id="noti" class="input-not"> </p>
+    <p> Código de seguridad </p>
+    <p> <input type="texto" name="" value="" id="cod" class="input-cod"></p>
+    <p> <button type="button" id="btn" class="btn"> CIFRAR </button> </p>
 
   </div>
 
-  <!-- Tercera vista Datos descifrados-->
+  <!-- segunda vista Datos descifrados-->
 
-  <div id='vista3' class='hide'>
-  <h3>El Poder Judicial sabe el difícil momento que estas atravesando. Por eso estamos contigo protegiendo tu identidad.
-  Agrega los datos cifrados:</h3>
+  <div id="vista2" class="hide">
+    <h2>
+      <img src="img/pjudicial.png">
 
-  <p> Nombre:  <input type='texto' name='' value= '' id="name" class="input-name"> </p>
-  <p> Notificación:  <input type="texto" name="" value= "" id="Notificación" class="input-not"> </p>
-  <p> Código de seguridad: <input type="texto" name="" value= "" id="Código" class="input-cod"></p>
-  <p> <button type="button" id="btn3"> DESCIFRAR </button> </p>
+    </h2>
+    <h3>El Poder Judicial sabe el difícil momento que estas atravesando. Por eso estamos contigo protegiendo tu
+      identidad.
+      Agrega los datos cifrados:</h3>
+
+    <p> Nombre </p>
+    <p> <input type="texto" name="" value="" id="desname" class="input-name"> </p>
+    <p> Notificación </p>
+    <p> <input type="texto" name="" value="" id="desnot" class="input-not"> </p>
+    <p> Código de seguridad </p>
+    <p> <input type="texto" name="" value="" id="desco" class="input-cod"> </p>
+    <p> <button type="button" id="btn2" class="btn"> DESCIFRAR </button> </p>
+
+  </div>
+
+  <div id="vista3" class="hide">
+    <h2>
+      <img src="img/pjudicial.png">
+
+    </h2>
+    <h3>Datos Descifrados:</h3>
+
+    <!-- Datos cifrados -->
+
+    <p> Nombre </p>
+    <p> <input type="texto" name="" value="" id="name2" class="input-name"> </p>
+    <p> Notificación </p>
+    <p> <input type="texto" name="" value="" id="not2" class="input-not"> </p>
+    <p> <button type="button" id="btn3" class="btn"> REGRESAR </button> </p>
 
   </div>
 
@@ -57,9 +76,8 @@
 
 
 
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+</body>
 
-
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
 </html>

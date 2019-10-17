@@ -1,27 +1,53 @@
+window.cipher = {
+    encode: (mensaje, offset) => {
+        let newMensaje = '';
+        let primerASCCI = 0;
+        let segundoASCCI = 0;
+        offset = parseInt(offset);
+        for (let i = 0; i < mensaje.length; i++) {
 
-  const encode = (mensaje, offset) =>{
+            primerASCCI = mensaje.charCodeAt(i);
 
-  let newMensaje = '';
-  for (let i= 0; i <mensaje.length; i++) {
+            if (primerASCCI >= 65 && primerASCCI <= 90) {
+                segundoASCCI = (primerASCCI - 65 + offset) % 26 + 65;
+                
 
-  let primerASCCI= mensaje.charCodeAt(i)
-  let segundoASCCI= (primerASCCI - 65 + offset)%26 + 65;
-  }
+            } else if (primerASCCI >= 97 && primerASCCI <= 122) {
+                segundoASCCI = (primerASCCI - 97 + offset) % 26 + 97;
+                
+            } else {
+                segundoASCCI = 32;            
+            }   
+            
+            newMensaje = newMensaje.concat(String.fromCharCode(segundoASCCI));
+        } 
+        return newMensaje;
+    },
 
-  // console.log (segundoASCCI);
+    decode: (mensaje, offset) => {
+        let newMensajeDos = '';
+        let primerASCCI = 0;
+        let segundoASCCI = 0;
+        offset = parseInt(offset);
+        for (let j = 0; j < mensaje.length; j++) {
 
-  newMensaje = newMensaje.concat(String.fromCharCode(segundoASCCI));
-}
-  console.log (newMensaje)
-  encode ('ANA',1)
+            primerASCCI = mensaje.charCodeAt(j);
 
-  const descifrar = (mensaje, offset) =>{
-   let newMensaje = '';
- offset = (26 - offset) % 26;
- newMensaje = cifrar(mensaje, offset)
+            if (primerASCCI >= 65 && primerASCCI <= 90) {
+                segundoASCCI = (primerASCCI + 65 - offset) % 26 + 65;
+                
 
- console.log (newMensaje)
-
- return newMensaje;
-}
-descifrar('BOB',1)
+            } else if (primerASCCI >= 97 && primerASCCI <= 122) {
+                segundoASCCI = (primerASCCI - 97 - offset + 52) % 26 + 97;
+                
+            } else {
+                segundoASCCI = 32;
+           
+            } newMensajeDos = newMensajeDos.concat(String.fromCharCode(segundoASCCI));
+             
+            // segundoASCCI = (primerASCCI - 65 - offset + 26) % 26 + 65;
+            // newMensajeDos = newMensajeDos.concat(String.fromCharCode(segundoASCCI));
+        }
+        return newMensajeDos;
+    }
+}    
